@@ -15,7 +15,7 @@ import { useSession } from "next-auth/react";
 import Dropdown from "../../../components/admin/dashboard/Dropdown";
 import { IoNotificationsSharp } from "react-icons/io5";
 import Notifications from "../../../components/admin/dashboard/notifications";
-export default function dashboard({ users, orders, products }) {
+export default function Dashboard({ users, orders, products }) {
   const { data: session } = useSession();
 
   return (

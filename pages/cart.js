@@ -13,7 +13,7 @@ import { women_swiper } from "../data/home";
 import { useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { saveCart } from "../requests/user";
-export default function cart() {
+export default function Cart() {
   const Router = useRouter();
   const { data: session } = useSession();
   const [selected, setSelected] = useState([]);

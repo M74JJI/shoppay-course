@@ -3,7 +3,7 @@ import CollapsibleTable from "../../../components/admin/orders/table";
 import db from "../../../utils/db";
 import Order from "../../../models/Order";
 import User from "../../../models/User";
-export default function orders({ orders }) {
+export default function Orders({ orders }) {
   console.log(orders);
   return (
     <Layout>

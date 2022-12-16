@@ -6,7 +6,7 @@ import Payment from "../../components/checkout/payment";
 import styles from "../../styles/profile.module.scss";
 import axios from "axios";
 import { useRouter } from "next/router";
-export default function index({ user, tab, defaultPaymentMethod }) {
+export default function Payment({ user, tab, defaultPaymentMethod }) {
   const router = useRouter();
   const [dbPM, setDbPM] = useState(defaultPaymentMethod);
   const [paymentMethod, setPaymentMethod] = useState(defaultPaymentMethod);

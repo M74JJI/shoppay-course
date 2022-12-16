@@ -5,7 +5,7 @@ import SubCategory from "../../../models/SubCategory";
 import { useState } from "react";
 import Create from "../../../components/admin/subCategories/Create";
 import List from "../../../components/admin/subCategories/List";
-export default function subCategories({ categories, subCategories }) {
+export default function SubCategories({ categories, subCategories }) {
   const [data, setData] = useState(subCategories);
   console.log(data);
   return (

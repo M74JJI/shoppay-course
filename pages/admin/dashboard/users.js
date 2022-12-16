@@ -3,7 +3,7 @@ import db from "../../../utils/db";
 import User from "../../../models/User";
 import EnhancedTable from "../../../components/admin/users/table";
 
-export default function users({ users }) {
+export default function Users({ users }) {
   console.log(users);
   return (
     <Layout>

@@ -22,7 +22,7 @@ import GenderFilter from "../components/browse/genderFilter";
 import HeadingFilters from "../components/browse/headingFilters";
 import { useRouter } from "next/router";
 
-export default function browse({
+export default function Browse({
   categories,
   subCategories,
   products,

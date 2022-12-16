@@ -8,7 +8,7 @@ import Order from "../../models/Order";
 import styles from "../../styles/profile.module.scss";
 import { FiExternalLink } from "react-icons/fi";
 import slugify from "slugify";
-export default function index({ user, tab, orders }) {
+export default function Orders({ user, tab, orders }) {
   const router = useRouter();
   return (
     <Layout session={user.user} tab={tab}>
