@@ -1,0 +1,70 @@
+.dropdown {
+  position: relative;
+  z-index: 99;
+  &__svg {
+    margin-top: 5px;
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $blue-color;
+      cursor: pointer;
+    }
+  }
+  &__content {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 10px;
+    width: max-content;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: $shadow-1;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease 0s;
+    max-height: 80vh;
+    overflow-y: auto;
+    &_notifications {
+      &_notification {
+        width: 100%;
+        padding: 17px 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #333;
+        &:hover {
+          background: $blue-color;
+          color: #fff;
+        }
+        span {
+          font-weight: 600;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+    &_footer {
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: underline;
+      color: $blue-color;
+      cursor: pointer;
+      &:hover {
+        color: $dark-blue-color;
+      }
+    }
+  }
+}
+
+.active {
+  transform: scale(1);
+  transition: transform 0.5s $cubic-bezier;
+}

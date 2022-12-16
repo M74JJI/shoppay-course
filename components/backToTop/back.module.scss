@@ -1,0 +1,14 @@
+.backToTop {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  svg {
+    fill: #fff;
+  }
+}

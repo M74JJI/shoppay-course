@@ -1,0 +1,35 @@
+@import "../base";
+.cart {
+  &__checkout {
+    max-height: 300px;
+    &_line {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &_total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 17px;
+      border-top: 1px solid #ccc;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+  }
+}
+.submit {
+  margin-top: 2rem;
+  button {
+    background: $blue-color;
+    border-radius: 5px;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    height: 50px;
+    font-size: 19px;
+    cursor: pointer;
+  }
+}

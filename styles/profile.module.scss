@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.orders {
+  nav {
+    margin-top: 2rem;
+    ul {
+      /*
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+     */
+      display: grid;
+      grid-template-columns: repeat(8, auto);
+      gap: 2px;
+      height: 20px;
+      li {
+        font-size: 15px;
+        color: #222;
+        cursor: pointer;
+        transition: all 0.1s;
+        &:hover {
+          font-weight: 600;
+          border-bottom: 1px solid #222;
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+    margin-top: 1rem;
+    thead {
+      background: #222;
+      color: #fff;
+      font-weight: 600;
+    }
+    tbody {
+      td {
+        padding: 5px;
+      }
+    }
+    td {
+      text-align: center;
+      svg {
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        stroke: $blue-color;
+        &:hover {
+          stroke: $dark-blue-color;
+        }
+      }
+    }
+  }
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+    background: #eee;
+    color: #222;
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  &__paid {
+    img {
+      width: 25px !important;
+    }
+  }
+}
+.active {
+  font-weight: 600;
+  border-bottom: 1px solid #222;
+}
+.button {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  font-weight: 600;
+  background: #000;
+  cursor: pointer;
+  margin: 2rem 0 0 1rem;
+}
+.disabled {
+  cursor: not-allowed;
+  background: #eee;
+}

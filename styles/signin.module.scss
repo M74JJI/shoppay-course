@@ -1,0 +1,131 @@
+.login {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 790px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__container {
+    padding: 3rem;
+    &:last-of-type {
+      margin-top: 3rem;
+      @media (max-width: 790px) {
+        margin-top: 0;
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    .back__svg {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #66666657;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $blue-color;
+        svg {
+          fill: $blue-color;
+        }
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #222;
+      }
+    }
+    span {
+      font-weight: 600;
+      font-size: 14px;
+      //padding-left: 10px;
+      a {
+        color: $blue-color;
+        cursor: pointer;
+        border-bottom: 1px solid $blue-color;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  &__form {
+    margin-top: 1rem;
+    h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+    p {
+      color: #96979b;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    .forgot {
+      color: #666;
+      padding-top: 1rem;
+      font-size: 14px;
+      width: fit-content;
+      height: 40px;
+      &:hover {
+        color: $blue-color;
+        border-bottom: 1px solid $blue-color;
+      }
+    }
+  }
+  &__socials {
+    margin-top: 1rem;
+    .or {
+      position: relative;
+      color: #666;
+      padding-left: 8rem;
+      &:before,
+      &:after {
+        content: "";
+        width: 130px;
+        height: 1px;
+        background: #66666648;
+        position: absolute;
+        top: 50%;
+      }
+      &:before {
+        left: 250px;
+      }
+      &:after {
+        left: -10px;
+      }
+    }
+    &_wrap {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 3rem;
+      img {
+        width: 36px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.social__btn {
+  border: none;
+  outline: none;
+  width: 290px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid #66666683;
+  cursor: pointer;
+}

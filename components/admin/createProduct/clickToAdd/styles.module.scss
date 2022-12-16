@@ -1,0 +1,46 @@
+@import "../../base";
+.clicktoadd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+  select,
+  input {
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $blue-color;
+    cursor: pointer;
+    margin-top: 5px;
+    &:hover {
+      fill: $dark-blue-color;
+    }
+  }
+}
+.click_btn {
+  background: $blue-color;
+  width: 250px;
+  font-weight: 600;
+  color: #fff;
+  height: 50px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+.svg {
+  width: 30px;
+  height: 30px;
+  fill: $blue-color;
+  cursor: pointer;
+  margin-top: 5px;
+  &:hover {
+    fill: $dark-blue-color;
+  }
+}

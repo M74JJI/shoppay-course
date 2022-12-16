@@ -1,0 +1,210 @@
+.infos {
+  color: #666;
+  background: #fff;
+  @media (max-width: 840px) {
+    padding-top: 1rem !important;
+  }
+  @media (max-width: 460px) {
+    max-width: 340px;
+  }
+  &__name {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  &__sku {
+    display: 12px;
+    font-weight: normal;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+  }
+  &__price {
+    color: #fa6338;
+    display: flex;
+    align-items: center;
+    h3 {
+      font-weight: normal;
+      font-size: 16px;
+      padding-left: 5px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        &:first-of-type {
+          text-decoration: line-through;
+        }
+        &:last-of-type {
+          color: #0647fa;
+        }
+      }
+    }
+  }
+  &__shipping {
+    display: block;
+    color: $blue-color;
+  }
+  &__sizes {
+    margin-top: 1rem;
+    &_wrap {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    &_size {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid #e6e6e6;
+      cursor: pointer;
+      &:hover {
+        background-image: linear-gradient(
+          to top,
+          #f3e7e9 0%,
+          #e3eeff 99%,
+          #e3eeff 100%
+        );
+      }
+    }
+  }
+  &__colors {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    span {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        outline: 1px solid #666;
+        outline-offset: 2px;
+      }
+    }
+  }
+  &__qty {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      svg {
+        transform: scale(0.9);
+      }
+      span {
+        width: 20px;
+        text-align: center;
+      }
+    }
+  }
+  &__actions {
+    @media (min-width: 1160px) {
+      display: flex;
+      gap: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 60px;
+      color: #666;
+      font-weight: 600;
+      font-size: 17px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.2s;
+      svg {
+        width: 30px;
+        height: 30px;
+        transform: translateY(-3px);
+      }
+      &:first-of-type {
+        background-image: linear-gradient(
+          to top,
+          #f3e7e9 0%,
+          #e3eeff 99%,
+          #e3eeff 100%
+        );
+      }
+      &:last-of-type {
+        border: 1px solid #000;
+        background: #222;
+        color: #fff;
+        svg {
+          margin-top: 5px;
+        }
+        @media (min-width: 1160px) {
+          width: 300px;
+        }
+        &:hover {
+          background: transparent;
+          border: 1px solid #333;
+          color: #333;
+        }
+      }
+    }
+  }
+  &__accordian {
+    margin-top: 1rem;
+    max-width: 400px;
+    &_grid {
+      display: flex;
+      justify-content: space-between;
+      color: #666;
+      font-weight: normal;
+      span {
+        display: flex;
+        gap: 2px;
+        &:last-of-type {
+          width: 180px;
+        }
+        p {
+          text-transform: capitalize;
+        }
+      }
+    }
+    .accordian {
+      border: none;
+      font-weight: 700;
+      &__summary {
+        background: transparent;
+      }
+    }
+  }
+}
+.active_size {
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+}
+.active_color {
+  outline: 1px solid #666;
+  outline-offset: 2px;
+}

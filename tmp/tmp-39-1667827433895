@@ -1,0 +1,149 @@
+import styles from "./product.module.scss";
+import ProductSwiper from "./ProductSwiper";
+import Link from "next/link";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { useRef, useState } from "react";
+import { color } from "@mui/system";
+export default function Product({ product, temp, admin }) {
+  const [productImages, setProductImages] = useState(
+    product.subProducts[0].images
+  );
+  const styless = product.subProducts.map((p) => {
+    return p.color;
+  });
+  const productPrices = product.subProducts.map((p) => {
+    const [size, qty, price] = p.sizes;
+    const object = { size, qty, price };
+    return p.sizes;
+  });
+  const [prices, setPrices] = useState(productPrices.flat());
+  console.log("prices", prices);
+  const [active, setActive] = useState(0);
+  /*-----*/
+  const addToCart = () => {};
+  /*-----*/
+  return (
+    <div className={styles.product}>
+      <div className={styles.product__container}>
+        <Link href={`/product/${product.slug}?style=1`}>
+          <div>
+            <ProductSwiper images={productImages} />
+          </div>
+        </Link>
+        <div className={styles.product__infos}>
+          <h1>
+            {product.name.length > 50
+              ? `${product.name.substring(0, 40)}...`
+              : product.name}
+          </h1>
+          {productPrices.length == 1 ? `USD${productPrices[0].price}$` : ""}
+          <div className={styles.product__colors}>
+            {styless &&
+              styless.map((style, i) =>
+                style.image ? (
+                  <img
+                    src={style.image}
+                    alt=""
+                    className={i == active && styles.active}
+                    onMouseOver={() => {
+                      setProductImages(product.subProducts[i].images);
+                      setActive(i);
+                    }}
+                  />
+                ) : (
+                  <span
+                    style={{ backgroundColor: `${color.color}` }}
+                    onMouseOver={() => {
+                      setProductImages(product.subProducts[i].images);
+                    }}
+                  ></span>
+                )
+              )}
+          </div>
+          {admin && (
+            <Link href={`/admin/product/update/${product._id}`}>Edit</Link>
+          )}
+          {/*
+            productPrices.sort((a, b) => a - b).length > 1 ? (
+            `from ${productPrices[0]} to ${
+              productPrices[productPrices.length - 1]
+            }`
+          ) : (
+            <b>US${product.subProducts[0].price}</b>
+          )*/}
+
+          {/*
+          <div
+            className={styles.product__colors}
+            onMouseLeave={() => {
+              setProductImages(
+                product.subProducts.map((p) => {
+                  return p.images[0];
+                })
+              );
+            }}
+          >
+            {colors &&
+              colors.map((color, i) => (
+                <span
+                  onMouseOver={() => {
+                    setProductImages(product.subProducts[i].images);
+                  }}
+                  style={{
+                    gridTemplateColumns: `repeat(${colors.length}, 1fr)`,
+                  }}
+                >
+                  <p style={{ background: `${color.color}` }}></p>
+                </span>
+              ))}
+            <div className={styles.addToWhishlist}>
+              <IoIosHeartEmpty />
+            </div>
+          </div>
+          <div className={styles.addtoCart}>
+            <button className={styles.animatedBtn} onClick={() => addToCart()}>
+              ADD TO CART
+            </button>
+          </div>
+          <div className={styles.discount}>-41%</div>
+   */}
+        </div>
+      </div>
+    </div>
+  );
+}
+/*
+    
+
+
+
+<div className={styles.product__container}>
+        <Link href="/">
+          <div>
+            <ProductSwiper images={product.images} />
+          </div>
+        </Link>
+        <div className={styles.product__infos}>
+          <h1>
+            {product.name.length > 50
+              ? `${product.name.substring(0, 40)}...`
+              : product.name}
+          </h1>
+          <b>US${product.price}</b>
+          <div className={styles.product__colors}>
+            {product.colors &&
+              product.colors.map((color) => (
+                <span style={{ background: `${color}` }}></span>
+              ))}
+            <div className={styles.addToWhishlist}>
+              <IoIosHeartEmpty />
+            </div>
+          </div>
+          <div className={styles.addtoCart}>
+            <button className={styles.animatedBtn}>ADD TO CART</button>
+          </div>
+          <div className={styles.discount}>-41%</div>
+        </div>
+      </div>
+ 
+*/

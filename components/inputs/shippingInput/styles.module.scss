@@ -1,0 +1,41 @@
+.input {
+  width: 100%;
+  margin-bottom: 1.2rem;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    input {
+      border: 1px solid #d6d6d6;
+      width: 100%;
+      height: 50px;
+      padding-left: 1rem;
+      padding-top: 14px;
+      color: #222;
+      &:focus {
+        outline: none;
+      }
+    }
+    span {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      font-size: 14px;
+      color: #666666e2;
+    }
+  }
+}
+.move {
+  transition: all 0.2s;
+  font-size: 12px !important;
+  transform: translateY(-10px);
+}
+.error__shipping {
+  input {
+    background: rgba(255, 0, 0, 0.031) !important;
+    border: 1px solid #cc674f;
+  }
+  p {
+    color: $error-color;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,37 @@
+@import "../components/admin/base";
+.header {
+  margin-bottom: 1rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.color_span {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: $shadow-1;
+}
+.image_span {
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+  box-shadow: $shadow-1;
+}
+.submit_btn {
+  width: 200px;
+  height: 60px;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  &:hover {
+    width: 250px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,126 @@
+@import "../base";
+.shipping {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  .col {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 700px) {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  form {
+    width: 100%;
+    transition: all 0.2s;
+    button {
+      width: 150px;
+      height: 50px;
+      color: #fff;
+      font-weight: 600;
+      background: #000;
+      cursor: pointer;
+    }
+    .select {
+      width: 220px;
+      margin-bottom: 10px !important;
+    }
+  }
+}
+.hide_show {
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #000;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+.addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  .address {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    box-shadow: $shadow-1;
+    cursor: pointer;
+    padding: 1rem;
+    height: 100%;
+    &__delete {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      fill: #666;
+      filter: invert(10%);
+      z-index: 10;
+    }
+    &__col {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        svg {
+          fill: #666;
+        }
+      }
+    }
+    &__side {
+      height: 90px;
+      width: 90px;
+      display: grid;
+      place-items: center;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: $shadow-1;
+        object-fit: cover;
+      }
+    }
+    .active__text {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      color: $success-color;
+      font-size: 12px;
+      &:befor {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $success-color;
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.active {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-image: url("../../../public/images/address.png");
+  }
+}

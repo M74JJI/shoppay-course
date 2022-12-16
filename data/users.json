@@ -1,0 +1,281 @@
+[{
+  "_id": {
+    "$oid": "62a2281cd0e120974f5c866c"
+  },
+  "name": "M74JJI",
+  "email": "pytaek1@gmail.com",
+  "image": "https://avatars.githubusercontent.com/u/52024672?v=4",
+  "emailVerified": null,
+  "address": [
+    {
+      "firstName": "Mohamed",
+      "lastName": "Hajji",
+      "phoneNumber": "+212604006003",
+      "address1": "hay old hmaid gr/g rue 73 n23",
+      "address2": "code postal 334",
+      "city": "ksar el kebir",
+      "zipCode": "92150",
+      "state": "larache",
+      "country": "Morocco",
+      "active": false,
+      "_id": {
+        "$oid": "62d5640fde2c24a7de35f1a0"
+      }
+    },
+    {
+      "firstName": "achraf",
+      "lastName": "wtf",
+      "phoneNumber": "+212602014520",
+      "address1": "adadja djdpjad ojdp ajdpjpdj",
+      "address2": "aodj odjoaj pajpoajdpoja pojadad",
+      "city": "tanger",
+      "zipCode": "5454",
+      "state": "",
+      "country": "Armenia",
+      "active": false,
+      "_id": {
+        "$oid": "62d5b2b8de2c24a7de35f259"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2022-07-18T19:42:56.720Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a22b5cd0e120974f5c866e"
+  },
+  "name": "rndol",
+  "email": null,
+  "image": "https://pbs.twimg.com/profile_images/1454831252813623300/3rONeY8Z.jpg",
+  "emailVerified": null,
+  "address": [
+    {
+      "firstName": "mohamed",
+      "lastName": "hajji",
+      "phoneNumber": "+212601201214",
+      "address1": "adadadadadada",
+      "address2": "adadadadadada",
+      "city": "ksar el kebir",
+      "zipCode": "2145",
+      "state": "larache",
+      "country": "Morocco",
+      "active": false,
+      "_id": {
+        "$oid": "62a89870c5603255ef141657"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2022-06-14T14:17:20.312Z"
+  },
+  "role": "admin"
+},{
+  "_id": {
+    "$oid": "62a22d98d0e120974f5c8671"
+  },
+  "name": "ada",
+  "email": "a@gmail.com",
+  "password": "$2b$12$qFDHwibuWLXZMkBco1EmO.9Kf2IYYx39bcz4gaWBSz5nsx4hrveWW",
+  "role": "user",
+  "image": "https://res.cloudinary.com/dmhcnhtng/image/upload/v1632757699/avatars/avatar_espefx.jpg",
+  "emailVerified": false,
+  "wishlist": [],
+  "createdAt": {
+    "$date": "2022-06-09T17:27:52.668Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-09T17:27:52.668Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a231bad0e120974f5c867a"
+  },
+  "name": "oauthfacebookk",
+  "email": "oauthfacebookk@gmail.com",
+  "image": "https://lh3.googleusercontent.com/a/AATXAJyPHrqiL1Glz66ZXV0jzBhcURymjWykRpk0uOEh=s96-c",
+  "emailVerified": null,
+  "address": [
+    {
+      "firstName": "Mohamed",
+      "lastName": "Hajji",
+      "phoneNumber": "+212604006003",
+      "address1": "hay old somethig",
+      "address2": "dadad",
+      "city": "ksar el kebir",
+      "zipCode": "92150",
+      "state": "larache",
+      "country": "",
+      "active": "true",
+      "_id": {
+        "$oid": "62a71b5aeed4851070c032a3"
+      }
+    },
+    {
+      "firstName": "second",
+      "lastName": "name",
+      "phoneNumber": "+21624512321",
+      "address1": "dadadada",
+      "address2": "dzzdzd",
+      "city": "dadadad",
+      "zipCode": "11515",
+      "state": "adad",
+      "country": "",
+      "_id": {
+        "$oid": "62a7370aeed4851070c032af"
+      }
+    },
+    {
+      "firstName": "aaaaaaaaaaaa",
+      "lastName": "aaaaaaaaaaaa",
+      "phoneNumber": "+212604010203",
+      "address1": "aaaaaaaaaaaa",
+      "address2": "aaaaaaaaaaaa",
+      "city": "aaaaaaaaaaaa",
+      "zipCode": "5151",
+      "state": "aaaaaaaaaaaa",
+      "country": "",
+      "_id": {
+        "$oid": "62a737e7eed4851070c032b9"
+      }
+    },
+    {
+      "firstName": "damn",
+      "lastName": "damn",
+      "phoneNumber": "+212601145212",
+      "address1": "damnadadadadad",
+      "address2": "damnadadad",
+      "city": "damn",
+      "zipCode": "damn",
+      "state": "damn",
+      "country": "",
+      "active": false,
+      "_id": {
+        "$oid": "62a74818db281d15327d0362"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2022-06-13T14:22:16.259Z"
+  }
+},{
+  "_id": {
+    "$oid": "62a233ccd0e120974f5c8681"
+  },
+  "name": "aad",
+  "email": "a7a@gmail.com",
+  "password": "$2b$12$JLCnm9aSbmp7vN/y7Wu/KOIC2I6Ua6q2ZUcnHJeRmEWNjzLoKE/W.",
+  "role": "user",
+  "image": "https://res.cloudinary.com/dmhcnhtng/image/upload/v1632757699/avatars/avatar_espefx.jpg",
+  "emailVerified": false,
+  "wishlist": [],
+  "createdAt": {
+    "$date": "2022-06-09T17:54:20.140Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-09T17:54:20.140Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a23cbaedec4a615c366f0a"
+  },
+  "name": "adad",
+  "email": "web74dev@gmail.coma",
+  "password": "$2b$12$ns8bR/w7xfTLEkl4FRTXTuEg74LkvoMqOe3.Oc7v54ae8DZfIR8Qi",
+  "role": "user",
+  "image": "https://res.cloudinary.com/dmhcnhtng/image/upload/v1632757699/avatars/avatar_espefx.jpg",
+  "emailVerified": false,
+  "wishlist": [],
+  "createdAt": {
+    "$date": "2022-06-09T18:32:26.748Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-09T18:32:26.748Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a23f2eedec4a615c366f12"
+  },
+  "name": "testa testtdad",
+  "email": "web74adev@gmail.comdada",
+  "password": "$2b$12$ll/qHa7HDPOcS64Y6rqG/ehPjgm069wa1vE9ttS5j7t5gIIO.n4Ui",
+  "role": "user",
+  "image": "https://res.cloudinary.com/dmhcnhtng/image/upload/v1632757699/avatars/avatar_espefx.jpg",
+  "emailVerified": false,
+  "wishlist": [],
+  "createdAt": {
+    "$date": "2022-06-09T18:42:54.714Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-09T18:42:54.714Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a364a2888b3865e9ae7d01"
+  },
+  "name": "web74dev",
+  "email": "web74dev@gmail.com",
+  "image": "https://lh3.googleusercontent.com/a/AATXAJx_Ca-_sYYJahDydOu58B20S8PzA4vLj3wEdrbZ=s96-c",
+  "emailVerified": null
+},{
+  "_id": {
+    "$oid": "62b33178fbcc6f0282db0606"
+  },
+  "name": "medhajjifpl",
+  "email": "medhajjifpl@gmail.com",
+  "image": "https://lh3.googleusercontent.com/a-/AOh14GiBfY0kbNixOa9r8P8qiyzvuLW6JKBLRvWJdtkT=s96-c",
+  "emailVerified": null,
+  "address": [
+    {
+      "firstName": "adadadad",
+      "lastName": "adadadad",
+      "phoneNumber": "+212604006003",
+      "address1": "adadadadadad",
+      "address2": "dadadad",
+      "city": "aadad",
+      "zipCode": "92150",
+      "state": "dad",
+      "country": "",
+      "active": false,
+      "_id": {
+        "$oid": "62ceca0710f018bc8a7977ec"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2022-07-20T21:17:50.034Z"
+  },
+  "role": "admin",
+  "defaultPaymentMethod": "paypal"
+},{
+  "_id": {
+    "$oid": "62c69fc002820c409dcce9ea"
+  },
+  "name": "m74jji",
+  "email": "m74jji@gmail.com",
+  "image": "https://lh3.googleusercontent.com/a-/AFdZucqHyFBdbPUlTGSmGoGR10yYWPesYl3quEbB84z_2w=s96-c",
+  "emailVerified": null
+},{
+  "_id": {
+    "$oid": "6345531ee9a67a2f9ef40288"
+  },
+  "name": "reviewTester",
+  "email": "rev@gmail.com",
+  "password": "$2b$12$EpJa/0Q95PghnM.CuxNRdOofoNcHdJlkr6Qqwt3Gb/QjAcQZUEvZe",
+  "role": "user",
+  "image": "https://res.cloudinary.com/dmhcnhtng/image/upload/v1632757699/avatars/avatar_espefx.jpg",
+  "emailVerified": false,
+  "defaultPaymentMethod": "",
+  "address": [],
+  "createdAt": {
+    "$date": "2022-10-11T11:27:26.739Z"
+  },
+  "updatedAt": {
+    "$date": "2022-10-11T11:27:26.739Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,56 @@
+.btnWrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  min-width: 120px;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  // border-radius: 5px;
+  color: #222;
+  margin-top: 10px;
+  transition: all 0.1s;
+  &__primary {
+    background: $blue-color;
+    color: #fff;
+  }
+  &:hover {
+    background: $blue-color;
+    color: #fff;
+  }
+}
+.header {
+  font-weight: 700;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  img {
+    width: 30px;
+  }
+}
+.flex {
+  margin: 1rem 0;
+}
+.header__error {
+  color: $error-color;
+  border-color: $error-color;
+}
+.error_bg {
+  background: $error-color !important;
+}

@@ -1,0 +1,49 @@
+.table {
+  thead {
+    background: $blue-color;
+    th {
+      color: #fff !important;
+    }
+  }
+  td {
+    b {
+      font-size: 15px;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: $shadow-1;
+  }
+  &__productImg {
+    height: 150px;
+    height: 100px;
+    object-fit: cover;
+    box-shadow: $shadow-1;
+  }
+}
+.ver {
+  width: 32px;
+  height: 32px;
+}
+.not_processed {
+  color: #e3503e;
+}
+.processing {
+  color: #54b7d3;
+}
+.dispatched {
+  color: #1e91cf;
+}
+.cancelled {
+  color: #e3d4d4;
+}
+.completed {
+  color: #4cb64c;
+}

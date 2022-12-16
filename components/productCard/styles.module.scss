@@ -1,0 +1,72 @@
+.product {
+  position: relative;
+  width: 290px;
+  height: 500px;
+  &__infos {
+    width: 100%;
+    margin-top: 1px;
+    h1 {
+      font-size: 13px;
+      font-weight: normal;
+      color: #222;
+    }
+    span {
+      color: $redish-color;
+      font-weight: 600;
+    }
+  }
+  &__colors {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: $shadow-1;
+      cursor: pointer;
+      outline-offset: 2px;
+      &:hover {
+        outline: 1px solid #000;
+      }
+    }
+    .active {
+      outline: 1px solid #000;
+    }
+    span {
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      box-shadow: $shadow-1;
+      overflow: hidden;
+    }
+  }
+  &__discount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 1;
+    background: $yellow-color;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+.swiper {
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  img {
+    height: 390px;
+    display: block;
+    border-radius: 10px;
+  }
+}

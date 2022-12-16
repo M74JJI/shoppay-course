@@ -1,0 +1,304 @@
+$blue-color: #2f82ff;
+$dark-blue-color: #1a28f1dc;
+$yellow-color: #fac80f;
+$violet-color: #5a31f4;
+$green-color: #3c811f;
+$redish-color: #f15f6f;
+$grey-color: #f8f8f8;
+$light-error-color: #fd010169;
+$error-color: #ed4337;
+$error-secondary-color: #f02f2fd8;
+$success-color: #6cc070;
+$shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$shadow-2: rgba(99, 99, 99, 0.1) 0px 0px 4px 0px;
+$cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.btn_primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: $blue-color;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
+}
+.btn_outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: $blue-color;
+  background: $grey-color;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.error {
+  padding: 10px;
+  color: $error-color;
+}
+.success {
+  padding: 10px;
+  color: $success-color;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #aeaeafa1;
+  border-radius: 5px;
+}
+//-------------Swipers------
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: 0 !important;
+  margin-right: auto;
+  cursor: pointer;
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: grid;
+    }
+  }
+}
+.mainSwiper,
+.user__swiper,
+.flashDeals__swiper,
+.offers_swiper {
+  .swiper {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+  }
+
+  .swiper-slide img {
+    height: 300px !important;
+    border-radius: 10px !important;
+    box-shadow: $shadow-1 !important;
+  }
+  .swiper-pagination-bullet {
+    width: 9px !important;
+    border-radius: 5px !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: $blue-color !important;
+    background: #ffff !important;
+    width: 13px !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff !important;
+    transform: scale(0.5) !important;
+    width: 50px !important;
+    height: 80px !important;
+    transition: 0.2s;
+    background: rgba(102, 102, 102, 0.354) !important;
+    display: none;
+    place-items: center;
+  }
+  .swiper-button-prev {
+    left: -13px;
+  }
+  .swiper-button-next {
+    right: -13px;
+  }
+}
+.mainSwiper {
+  .swiper-slide {
+    img {
+      // object-fit: contain;
+    }
+  }
+}
+.offers_swiper {
+  max-width: 550px;
+  transform: translateX(33%);
+  @media (max-width: 980px) {
+    transform: translateX(1%);
+    max-width: 750px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 150px !important;
+    border-radius: 10px !important;
+    height: 90% !important;
+    margin-top: 0.6rem !important;
+    box-shadow: $shadow-1;
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.2s;
+    }
+    span {
+      position: absolute;
+      color: #fff;
+      &:first-of-type {
+        bottom: 10px;
+        width: 90px;
+        height: 25px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        background: $yellow-color;
+      }
+      &:last-of-type {
+        font-style: italic;
+        top: -5px;
+        right: -5px;
+        background: $redish-color;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: $shadow-1;
+      }
+    }
+  }
+
+  .swiper-slide img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+.user__swiper {
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    img {
+      height: 240px !important;
+    }
+  }
+}
+.flashDeals__swiper {
+  .swiper-slide {
+    img {
+      border-radius: 0 !important;
+      height: 320px !important;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 35%;
+  }
+  @media (max-width: 450px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: grid !important;
+    }
+  }
+}
+.products__swiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #666;
+    box-shadow: $shadow-1;
+    &::after {
+      transform: scale(0.5);
+    }
+  }
+}
+.simillar_swiper {
+  max-width: 650px;
+  .swiper-pagination {
+    display: none !important;
+  }
+  img {
+    width: 100px;
+    height: 160px;
+    object-fit: cover;
+    cursor: pointer;
+    @media (min-width: 461px) {
+      width: 150px;
+      height: 200px;
+    }
+  }
+}
+.adminproduct__swiper {
+}
+//-------------Swipers------

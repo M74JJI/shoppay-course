@@ -1,0 +1,51 @@
+.sidebar {
+  height: 100vh;
+  &__container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: $shadow-1;
+    }
+  }
+  &__name {
+    margin-top: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  ul {
+    margin-top: 1rem;
+    padding: 0;
+    width: 200px;
+    li {
+      margin-top: 1rem;
+      cursor: pointer;
+      user-select: none;
+      b {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      ul {
+        margin-top: 0;
+        padding-left: 1rem;
+        color: #666;
+        transition: all 0.3s;
+        li {
+          margin-top: 5px;
+          &:hover {
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+}
+.active {
+  font-weight: 600;
+}

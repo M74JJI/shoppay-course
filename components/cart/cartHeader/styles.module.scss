@@ -1,0 +1,15 @@
+@import "../base";
+.cart__header {
+  @media (min-width: 900px) {
+    height: 140px;
+  }
+}
+.flex {
+  gap: 10px;
+  cursor: pointer;
+  &:hover {
+    .checkbox {
+      border-color: $blue-color;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../base";
+.colors {
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  button {
+    background: $blue-color;
+    color: #fff;
+  }
+}
+.wheel {
+  overflow: hidden;
+}
+.square__color {
+  padding: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  overflow: hidden;
+}
+.toggle {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  &__btn {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+      stroke: $blue-color;
+    }
+  }
+}
