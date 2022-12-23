@@ -38,7 +38,9 @@ export default function product({ product, related }) {
             <Infos product={product} setActiveImg={setActiveImg} />
           </div>
           <Reviews product={product} />
+          {/*
           <ProductsSwiper products={related} />
+          */}
         </div>
       </div>
     </>
