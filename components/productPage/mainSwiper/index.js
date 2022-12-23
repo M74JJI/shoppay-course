@@ -16,12 +16,12 @@ export default function MainSwiper({ images, activeImg }) {
             },
             largeImage: {
               src: activeImg || images[active].url,
-              width: 1200,
-              height: 1800,
+              width: 1500,
+              height: 2000,
             },
             enlargedImageContainerDimensions: {
-              width: "150%",
-              height: "150%",
+              width: "200%",
+              height: "100%",
             },
           }}
         />

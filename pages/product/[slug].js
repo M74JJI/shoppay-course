@@ -13,14 +13,18 @@ import { useState } from "react";
 import Infos from "../../components/productPage/infos";
 import Reviews from "../../components/productPage/reviews";
 import ProductsSwiper from "../../components/productsSwiper";
-export default function product({ product }) {
+export default function product({ product, related }) {
   const [activeImg, setActiveImg] = useState("");
+  const country = {
+    name: "Morocco",
+    flag: "https://cdn-icons-png.flaticon.com/512/197/197551.png?w=360",
+  };
   return (
     <>
       <Head>
         <title>{product.name}</title>
       </Head>
-      <Header country="" />
+      <Header country={country} />
       <div className={styles.product}>
         <div className={styles.product__container}>
           <div className={styles.path}>
@@ -34,7 +38,7 @@ export default function product({ product }) {
             <Infos product={product} setActiveImg={setActiveImg} />
           </div>
           <Reviews product={product} />
-          <ProductsSwiper products={product.related} />
+          <ProductsSwiper products={related} />
         </div>
       </div>
     </>
@@ -50,7 +54,7 @@ export async function getServerSideProps(context) {
   //------------
   let product = await Product.findOne({ slug })
     .populate({ path: "category", model: Category })
-    .populate({ path: "subCategories._id", model: SubCategory })
+    .populate({ path: "subCategories", model: SubCategory })
     .populate({ path: "reviews.reviewBy", model: User })
     .lean();
   let subProduct = product.subProducts[style];
@@ -116,8 +120,8 @@ export async function getServerSideProps(context) {
         (element, index, array) =>
           array.findIndex((el2) => el2.size === element.size) === index
       ),
-    related: await Product.find({ category: product.category }).lean(),
   };
+  const related = await Product.find({ category: product.category._id }).lean();
   //------------
   function calculatePercentage(num) {
     return (
@@ -132,9 +136,11 @@ export async function getServerSideProps(context) {
     ).toFixed(1);
   }
   db.disconnectDb();
+  console.log("related", related);
   return {
     props: {
       product: JSON.parse(JSON.stringify(newProduct)),
+      related: JSON.parse(JSON.stringify(related)),
     },
   };
 }

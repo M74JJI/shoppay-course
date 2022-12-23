@@ -8,7 +8,7 @@ import CircledIconBtn from "../../components/buttons/circledIconBtn";
 import LoginInput from "../../components/inputs/loginInput";
 import styles from "../../styles/profile.module.scss";
 import axios from "axios";
-export default function Security({ user, tab }) {
+export default function security({ user, tab }) {
   const [current_password, setCurrent_password] = useState("");
   const [password, setPassword] = useState("");
   const [conf_password, setConf_password] = useState("");

@@ -75,3 +75,18 @@
   justify-content: flex-end;
   padding: 2rem;
 }
+.fixed {
+  position: relative;
+  min-height: 100vh;
+  .browse__store_filters {
+    position: fixed;
+    top: 2rem;
+    left: 1.8rem;
+    width: 300px;
+  }
+  .browse__store_products_wrap {
+    position: absolute;
+    top: 2rem;
+    left: 316px;
+  }
+}

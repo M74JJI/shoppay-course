@@ -28,18 +28,16 @@ export default function order({
   stripe_public_key,
 }) {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
-  const [{ loading, error, success }, dispatch] = useReducer(reducer, {
+  const [dispatch] = useReducer(reducer, {
     loading: true,
-    order: {},
     error: "",
+    success: "",
   });
   useEffect(() => {
-    if (!orderData._id || success) {
-      if (success) {
-        dispatch({
-          type: "PAY_RESET",
-        });
-      }
+    if (!orderData._id) {
+      dispatch({
+        type: "PAY_RESET",
+      });
     } else {
       paypalDispatch({
         type: "resetOptions",
@@ -53,7 +51,7 @@ export default function order({
         value: "pending",
       });
     }
-  }, [order, success]);
+  }, [order]);
   function createOrderHanlder(data, actions) {
     return actions.order
       .create({

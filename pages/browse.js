@@ -22,7 +22,8 @@ import GenderFilter from "../components/browse/genderFilter";
 import HeadingFilters from "../components/browse/headingFilters";
 import { useRouter } from "next/router";
 import { Pagination } from "@mui/material";
-
+import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 export default function Browse({
   categories,
   subCategories,
@@ -34,6 +35,7 @@ export default function Browse({
   patterns,
   materials,
   paginationCount,
+  country,
 }) {
   const router = useRouter();
   const filter = ({
@@ -175,23 +177,54 @@ export default function Browse({
       active: existedQuery && valueCheck !== -1 ? true : false,
     };
   }
+  //---------------------------------
+  const [scrollY, setScrollY] = useState(0);
+  const [height, setHeight] = useState(0);
+  const headerRef = useRef(null);
+  const el = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    setHeight(headerRef.current?.offsetHeight + el.current?.offsetHeight);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(scrollY, height);
+  //---------------------------------
   return (
     <div className={styles.browse}>
-      <Header searchHandler={searchHandler} />
+      <div ref={headerRef}>
+        <Header searchHandler={searchHandler} country={country} />
+      </div>
       <div className={styles.browse__container}>
-        <div className={styles.browse__path}>Home / Browse</div>
-        <div className={styles.browse__tags}>
-          {categories.map((c) => (
-            <Link href="" key={c._id}>
-              <a>{c.name}</a>
-            </Link>
-          ))}
+        <div ref={el}>
+          <div className={styles.browse__path}>Home / Browse</div>
+          <div className={styles.browse__tags}>
+            {categories.map((c) => (
+              <Link href="" key={c._id}>
+                <a>{c.name}</a>
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className={styles.browse__store}>
+        <div
+          className={`${styles.browse__store} ${
+            scrollY >= height ? styles.fixed : ""
+          }`}
+        >
           <div
             className={`${styles.browse__store_filters} ${styles.scrollbar}`}
           >
-            <button className={styles.browse__clearBtn}>Clear All (3)</button>
+            <button
+              className={styles.browse__clearBtn}
+              onClick={() => router.push("/browse")}
+            >
+              Clear All ({Object.keys(router.query).length})
+            </button>
             <CategoryFilter
               categories={categories}
               subCategories={subCategories}
@@ -269,7 +302,7 @@ export async function getServerSideProps(ctx) {
   const shippingQuery = query.shipping || 0;
   const ratingQuery = query.rating || "";
   const sortQuery = query.sort || "";
-  const pageSize = 15;
+  const pageSize = 50;
   const page = query.page || 1;
 
   //-----------
@@ -424,7 +457,14 @@ export async function getServerSideProps(ctx) {
     }
     return styleRegex;
   }
-
+  let data = await axios
+    .get("https://api.ipregistry.co/?key=r208izz0q0icseks")
+    .then((res) => {
+      return res.data.location.country;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   //-------------------------------------------------->
   db.connectDb();
   let productsDb = await Product.find({
@@ -495,6 +535,10 @@ export async function getServerSideProps(ctx) {
       patterns,
       materials,
       paginationCount: Math.ceil(totalProducts / pageSize),
+      country: {
+        name: "Morocco",
+        flag: "https://cdn-icons-png.flaticon.com/512/197/197551.png?w=360",
+      },
     },
   };
 }

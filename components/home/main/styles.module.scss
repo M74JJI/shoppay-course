@@ -133,15 +133,51 @@
     box-shadow: $shadow-1;
   }
   .offers {
+    position: relative;
     grid-area: offers;
     overflow: hidden;
     height: 220px;
     background: #fff;
     border-radius: 10px;
     box-shadow: $shadow-1;
-    background-image: url("../../../public/images/flash.webp");
-    background-position: -275px -135px;
+    // background-image: url("../../../public/images/flash.webp");
+    background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-e-commerce-banner-background-image_500366534.jpg");
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190220/ourmid/pngtree-contrast-color-wave-point-geometric-banner-image_9983.jpg");
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-color-horn-polygon-pop-wind-image_16349.jpg");
+    //background-position: -275px -135px;
     background-size: cover;
+    background-repeat: no-repeat;
+    &__text {
+      max-width: 200px;
+      position: absolute;
+      top: 1.3rem;
+      left: 2rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.418);
+      padding: 1rem;
+      color: $blue-color;
+      text-align: center;
+      b {
+      }
+      a {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $blue-color;
+        height: 40px;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #fff;
+        border: 1px solid #fff;
+        animation: all 0.2s ease-in-out;
+        border-color: #fff;
+        &:hover {
+          transform: scale(1.05);
+          font-size: 16px;
+        }
+      }
+    }
   }
   .user {
     position: relative;
@@ -167,8 +203,9 @@
       flex-direction: column;
       align-items: center;
       img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
         border-radius: 50%;
         box-shadow: $shadow-1;
       }
@@ -242,4 +279,11 @@
       transform: rotate(180deg);
     }
   }
+}
+.new {
+  position: absolute;
+  top: -8px;
+  left: -9px;
+  width: 80px;
+  z-index: 99;
 }

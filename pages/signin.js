@@ -13,6 +13,7 @@ import {
   getProviders,
   getSession,
   signIn,
+  country,
 } from "next-auth/react";
 import axios from "axios";
 import DotLoaderSpinner from "../components/loaders/dotLoader";
@@ -28,7 +29,7 @@ const initialvalues = {
   error: "",
   login_error: "",
 };
-export default function Signin({ providers, callbackUrl, csrfToken }) {
+export default function signin({ providers, callbackUrl, csrfToken }) {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(initialvalues);
   const {
@@ -115,10 +116,14 @@ export default function Signin({ providers, callbackUrl, csrfToken }) {
       return Router.push(callbackUrl || "/");
     }
   };
+  const country = {
+    name: "Morocco",
+    flag: "https://cdn-icons-png.flaticon.com/512/197/197551.png?w=360",
+  };
   return (
     <>
       {loading && <DotLoaderSpinner loading={loading} />}
-      <Header />
+      <Header country={country} />
       <div className={styles.login}>
         <div className={styles.login__container}>
           <div className={styles.login__header}>
@@ -280,6 +285,10 @@ export async function getServerSideProps(context) {
   const csrfToken = await getCsrfToken(context);
   const providers = Object.values(await getProviders());
   return {
-    props: { providers, csrfToken, callbackUrl },
+    props: {
+      providers,
+      csrfToken,
+      callbackUrl,
+    },
   };
 }

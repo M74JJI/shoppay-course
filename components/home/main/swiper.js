@@ -23,14 +23,14 @@ export default function MainSwiper() {
           clickable: true,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mainSwiper"
       >
-        {[...Array(10).keys()].map((i) => (
+        {[...Array(15).keys()].map((i) => (
           <SwiperSlide>
             <img src={`../../../images/swiper/${i + 1}.jpg`} alt="" />
           </SwiperSlide>

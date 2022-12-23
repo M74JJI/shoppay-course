@@ -31,14 +31,14 @@ export default function HeadingFilters({
           type="number"
           placeholder="min"
           min="0"
-          value={router.query.price?.split("_")[0] || ""}
+          //  value={router.query.price?.split("_")[0] || ""}
           onChange={(e) => priceHandler(e.target.value, "min")}
         />
         <input
           type="number"
           placeholder="max"
           min="0"
-          value={router.query.price?.split("_")[1] || ""}
+          //value={router.query.price?.split("_")[1] || ""}
           onChange={(e) => priceHandler(e.target.value, "max")}
         />
       </div>

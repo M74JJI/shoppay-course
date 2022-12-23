@@ -12,7 +12,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
-
 // import required modules
 import { EffectCards, Navigation } from "swiper";
 import { userSwiperArray } from "../../../data/home";
@@ -74,6 +73,11 @@ export default function User() {
           </li>
         </ul>
         <div className={styles.user__swiper}>
+          <img
+            src="https://assets.stickpng.com/images/5a5a6d2414d8c4188e0b088d.png"
+            alt=""
+            className={styles.new}
+          />
           <Swiper
             effect={"cards"}
             grabCursor={true}
